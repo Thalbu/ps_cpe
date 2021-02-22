@@ -1,0 +1,462 @@
+'/**/
+*{/*Definições gerais do site*/
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {/*Ambos os @font-face são as adições das fontes, já que elas não são padões do sistema*/
+	font-family: 'Slim_Joe';
+	src: url(fonts/slim_joe-webfont.woff);
+}
+
+@font-face {
+	font-family: 'Big_John';
+	src: url(fonts/big-john-webfont.woff);
+}
+
+main_container{
+	padding: 0px;
+}
+
+body{
+	font-family: Slim_Joe;
+	font-size: 15px;
+	font-weight: bolder;
+	line-height: 1.2;/*Controla a distância entre as linhas de texto*/
+	background-color: black;                                                                         /*--------------*/
+	margin: 0px; 
+}
+
+/*Títulos*/
+h1, h2, h3{
+	font-family: Big_John;
+	text-align: center;
+	color: white;
+}
+
+/*Header*/
+header{
+	padding-top: 10px;/*distância do conteúdo até o topo*/                                            /*--------------*/
+	min-height: 70px;/*Quando se adaptando, vai ser o tamanho minimo do Header*/
+	position: fixed;/*Fixed quer dizer que essa parte ficará sempre fixa num ponto da página*/
+	width: 100%;
+	position: fixed;/*Fixed quer dizer que essa parte ficará sempre fixa num ponto da página*/
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	border-bottom: #f27980 3px solid;/*Bordinha no fim do menu*/                                      /*--------------*/
+}
+
+header a{
+	color: white;
+	text-decoration: none;/*Remove o "underlin6e" debaixo dos hiperlinks*/
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	float: left;
+	display: inline;/*Esse comando faz com que os itens do menu fiquem em linha reta*/
+	padding: 0 20px 0 20px;/*Esse paddind mantém a distância entre os itens do menu*/
+}
+header #logo{
+	overflow: hidden;                                                                                   /*--------------*/
+	border-radius: 70px;                                                                                /*--------------*/
+	float: left;/*Põe a logo do lado esquerdo do menu*/                                                 /*--------------*/
+	margin-top: 5px;                                                                                    /*--------------*/
+	width: 70px;                                                                                        /*--------------*/
+	height: 70px;                                                                                       /*--------------*/
+	background-size: 100px 100px;                                                                       /*--------------*/
+	margin-right:10px;                                                                                  /*--------------*/
+	margin-top: 0px;                                                                                    /*--------------*/
+	margin-bottom: 10px;                                                                                /*--------------*/
+}
+
+header nav{
+	float: right;/*Põe os itens do menu do lado direito*/
+	margin-top: 15px;
+}
+
+header a:hover{/*interação com a página quando o mouse passa sobre os intens do menu*/
+	color: #f27980;/*deixa eles cor da logo*/                                                            /*--------------*/
+	font-weight: bold;/*faz a letra ficar em negrito*/
+}
+
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+	display: flex;/*Torna os itens flexíveis*/
+	flex-direction: row;/*Vai distribuir os elementos em linha*/
+	justify-content: center;
+	align-items: center;
+}
+
+/*Sections, onde está o conteúdo*/
+section{
+	padding-top: 110px; /*Altura para que o texto não se misture com a barra de navegação*/
+	height: 110vh;/*Faz com que cada section ocupe a página inteira*/
+	border-bottom: black 60px solid; /*Adiciona barras pretas entre os backgrounds*/                      /*--------------*/
+
+}
+
+section h3{
+	color: white;
+	padding: 5px;
+}
+
+section p{
+	padding: 10px;
+	color: white;
+	text-align: justify;
+}
+
+/*imagem de background, só descomentar quando ajustar o tamanho dos produtos*/
+section#Produtos{
+	background: url(img/bg1.jpg) no-repeat center center/cover;
+	height: 110vh;                                                                                         /*--------------*/
+	background-attachment: fixed;
+}
+
+section#Sobre_o_Chef{
+	background: url(img/bg2.jpg) no-repeat center center/cover;
+	background-attachment: fixed;
+}
+
+section#Historia{
+	background: url(img/bg3.jpg) no-repeat center center/cover;
+	background-attachment: fixed;
+}
+
+section#Contato{
+	background: url(img/bg4.jpg) no-repeat center center/cover;
+	background-attachment: fixed;
+}
+
+/*Boxes*/
+#Produtos .button img{
+	width: 75%;/*define o tamanho da imagem*/
+	max-width: 180px;/*Tamanho máximo que a figura toma na página*/
+	min-width: 90px;
+	border: #f27980 3px solid;/*adiciona um contorno a imagem*/                                            /*---------------*/
+	border-radius: 20px;/*raio do arredondamento das bordas do bloco*/
+}
+
+#Produtos .button{
+	margin-top: 20px;
+	float: left;
+	text-align: center;
+	width: 30%;
+	min-width: 180px;
+	padding: 10px
+}
+
+#Contatos .box{
+	margin-top: 20px;
+	float: left;
+	text-align: center;
+	width: 30%;
+	padding: 10px
+}
+
+.box_container{
+	background-color: rgba(0, 0, 0, 0.9);
+	border-radius: 20px;/*raio do arredondamento das bordas do bloco*/
+}
+
+.box_container:hover{
+	background: #f27980;                                                                                  /*--------------*/
+}
+
+/*Formulário de contato*/
+.header_container{
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+form{
+	text-align: center;
+	color: #FFF;
+	font-size: 16px;
+	max-width: 510px;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+input,
+textarea{
+	width: 460px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.Enviar input{
+	background: #069;
+	height: 40px;
+	width: 150px;
+	font-family: "Slim_Joe";
+	font-weight: bold;
+	border: 1px solid;
+	color: #FFF;
+	cursor: pointer;
+}
+
+.Enviar,/*É o que alinha ao centro os conteúdos*/
+.Mensagem,
+.Email,
+.Nome{
+	text-align: center;
+}
+
+.Enviar input:hover{
+	background: #079;
+}
+
+
+/*Footer, rodapé*/
+footer{
+	padding: 20px;
+	color: white;
+	background-color: #f27980;                                                                            /*--------------*/
+	text-align: left;
+}
+footer p{
+	padding-top: 14px;
+	float: left;
+	text-align: center;
+}
+
+#rodape {
+	position: relative;
+	background-color: #f27980; 
+}
+
+/*links para redes sociais*/
+footer ul{
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+footer li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px
+}
+
+@media(max-width: 805px){/*Define o tamanho de algumas coisas quando a tela está se reduzindo*/
+
+	header #logo,
+	header nav,
+	header nav li
+	#Contato h1,
+	#Contato h2,
+	#Contato form,
+	footer ul,
+	footer ul li{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+    
+	header #logo{
+		overflow: hidden;                                                                                  /*--------------*/
+		border-radius: 70px;                                                                               /*--------------*/
+		float: left;/*Põe a logo do lado esquerdo do menu*/                                                /*--------------*/
+		margin-top: 5px;                                                                                   /*--------------*/
+		width: 70px;                                                                                       /*--------------*/
+		height: 70px;                                                                                      /*--------------*/
+		background-size: 100px 100px;                                                                      /*--------------*/
+		margin-right:10px;                                                                                 /*--------------*/
+		margin-top: 0px;                                                                                   /*--------------*/
+		margin-bottom: 10px;                                                                               /*--------------*/
+	}
+	
+	header{
+		padding-bottom: 7px;
+	}
+	
+	section{
+		padding-top: 130px;
+		height: 85vh;
+	}
+  
+	section#Produtos{
+		height: 120vh;
+	}
+	
+	#Produtos .button{
+		width: 25%
+	}
+	
+	input,
+	textarea{
+		width: 94%;
+		justify-content: center;
+	}
+
+	@media(max-width: 380px){
+		#Produtos .button img{
+			width: 75%;/*define o tamanho da imagem*/
+			max-width: 180px;/*Tamanho máximo que a figura toma na página*/
+			min-width: 90px;
+			border: #f27980 3px solid;/*adiciona um contorno a imagem*/                                   /*--------------*/
+			border-radius: 20px;/*raio do arredondamento das bordas do bloco*/
+		}
+		#Produtos .button{
+			margin-top: 20px;
+			float: left;
+			text-align: center;
+			width: 100%;
+			min-width: 180px;
+			padding: 10px
+		}
+		section{
+			height: 110vh;
+		}
+		section#Produtos{
+			height: 290vh;
+		}
+		section#Contato{
+			height: 140vh;
+		}
+		footer ul{
+			margin-top: 30px;
+		}
+		footer ul .Redes{
+			padding-top: 20px;
+		}
+		.container{
+			display: flex;/*Torna os itens flexíveis*/
+			flex-direction: column;/*Vai distribuir os elementos em coluna*/
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+.toggle{
+	width: 100%;
+	padding: 10px 20px;
+	text-align: right;
+	box-sizing: border-box;
+	color: #FFF;
+	font-size: 20px;
+	display: none;
+}
+
+@media (max-width:768px){
+	.toggle{
+		display: block;
+	}
+	ul{
+		width: 100%;
+		display: none;
+	}
+	ul li{
+		display: block;
+		text-align: center;
+	}
+}
+
+.active{
+	display: block;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 1;/*Aparentemente, faz com que o conteúdo dessa classe se sobreponha a todo o resto da página*/
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal_content,
+.modal_content2{
+	background-color: rgba(0, 0, 0, 0.9);
+	margin: 20% auto; /*Controla a distância da caixá até o topo da página*/
+	padding: 0px;
+	width: 70%;
+	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+	animation-name: modal_open;
+	animation-duration: 1s;
+}
+
+.close_button{
+	color: white;
+	float: right;
+	font-size: 30px;
+	margin-bottom: 12px;
+	padding-top: 0;
+}
+
+.close_button:hover, .close_button:focus{
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@keyframes modal_open{
+	from{ opacity: 0 }
+	to{ opacity: 1}
+}
+
+#modal_button.button,
+#modal_button2.button,
+#modal_button3.button,
+#modal_button4.button,
+#modal_button5.button,
+#modal_button6.button{
+	margin: 0;
+	padding: 20px;
+	border: 0;
+	background: rgba(0, 0, 0, 0);
+   border-radius: 20px;                                                                                   /*--------------*/
+}
+
+.title{
+	background: #f27980;                                                                                  /*--------------*/
+	margin: auto;
+	padding-top: 7px;
+}
+
+
+#avatar{
+	margin: auto;
+	width: 30%;
+	height: 30%;
+	display: block;
+	margin-bottom: 1%;
+	border-radius: 20px;
+
+}
+
+#cedilha{
+	font-family: arial;
+	font-weight: bold;
+	font-style: bolder;
+	font-size: x-large;
+}
+
+#la{
+	font-family:serif ;
+	font-size: large;
+	font-weight: lighter;
+
+}
+
+#a{
+	font-family: arial;
+	font-weight: 900;
+	font-style: bolder;
+	font-size: x-large;
+}
+#t{
+	font-family:monospace;
+	font-size: x-large;
+	font-weight: 500;
+}
